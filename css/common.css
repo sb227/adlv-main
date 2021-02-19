@@ -7,12 +7,12 @@
   left: 0;
   z-index: 10;
   right:17px;
+  background-color: #fff;
 }
 
 .notice_wrap{
-  height: 150px;
+  height: 100px;
   position: relative;
-  
   border-bottom:1px solid #333;
   background-color: #fff;
   transition: .4s;
@@ -22,6 +22,7 @@
 
 .notice_wrap.active{
   height: 0;
+  border: 0;
 }
 .notice_area.active{
   overflow: hidden;
@@ -38,10 +39,10 @@
   display: flex;
   align-content: center;
   flex-wrap: wrap;
-  padding:3% 0;
+  line-height: 1.2;
 }
 .notice_txt_wrap p{width: 100%;}
-.ntc_t2{font-size: 4vmin; color:aquamarine;}
+.ntc_t2{font-size: 4vmin; font-weight: 800;}
 
 
 /* header */
@@ -218,6 +219,7 @@ footer {
   margin-right: 20px;
 }
 
+
 /* sns이미지 */
 .footer_sub_list img {
   width: 100%;
@@ -325,20 +327,35 @@ footer {
   .footer_info_list {
     margin-bottom: 7%;
     width: 100%;
+    flex-wrap: wrap-reverse;
   }
+
+  .footer_info_list > li{
+    width: 50%;
+  }
+
+  .footer_sns{
+    flex-wrap: wrap;
+  }
+
+  .footer_sns a{
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer_sns li{
+    margin-bottom: 20px;
+    width:auto;
+  }
+  .insta_wrap{display: flex; align-items: center;}
+
+  .insta_wrap p {margin-left: 10px;}
 }
 
 /* 미디어쿼리 768px */
 
 @media only screen and (max-width:480px) {
-  .footer_info_list {
-    flex-wrap: wrap-reverse;
-  }
-
-  .footer_info_list>li {
-    width: 50%;
-  }
-
   .footer_info_list>li:last-child {
     margin-bottom: 20px;
   }
